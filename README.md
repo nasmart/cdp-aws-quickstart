@@ -103,19 +103,20 @@ In order to complete this quickstart, you'll need access to two things.
     5. Under *Amazon Web Services Credential*, chose the credential we created earlier. 
     6. Click **Next**
     7. Under *Data Lake Settings*, give your new Data Lake a name.  The name can be any valid name. Choose the latest Data Lake Version
-    8. Choose *Light Duty* for Data Lake scale. 
-    9. Click **Next**
-    10. Choose your desired **region**, this should be the same region you created an SSH Key in above. 
-    11. Under *select network* choose **Create New Network**
-    12. Under *Security Access Settings* choose **Create New Security Groups**
+    8. Under *Data Access*, select Instance Profile ending "-data-access-instance-profile"; select S3 bucket entered on CloudFormation stack for Storage Location Base; select role ending "-datalake-admin-role" for Data Access Role.
+    9. Choose *Light Duty* for Scale. 
+    10. Click **Next**
+    11. Choose your desired **region**, this should be the same region you created an SSH Key in above. 
+    12. Under *select network* choose **Create New Network**
+    13. Skip to *Security Access Settings* and choose **Create New Security Groups**
         ![Region](https://github.com/tonyHuinker/cdp-aws-quickstart/blob/master/screenshots/regionnetwork.png?raw=true). 
-        
-    13. Under *SSH Settings*, choose the SSH key created earlier. 
-    14. Under *Logs - Storage and Audit*, choose the Instance Profile we mentioned to save earlier, titled **prefix-log-access-instance-profile**, for logs location base choose **S3BucketName/logs**, and for *Ranger Audit Role* choose **prefix-ranger-audit-role**
-        ![logs](https://github.com/tonyHuinker/cdp-aws-quickstart/blob/master/screenshots/logs.png?raw=true).
-    15.  Under *Data Access*, choose the **prefix-data-access-instance-profile**, for *Storage Location Base* choose **S3Bucketname**. 
-        ![data](https://github.com/tonyHuinker/cdp-aws-quickstart/blob/master/screenshots/data.png?raw=true).
-    16. (optional) Provide any tags you'd like these resources to be tagged with. 
-    17. Under *Enable S3 Guard*, enter **prefix-dynamodb-table**
+    14. Under *SSH Settings*, choose the SSH key created earlier. 
+    15. (optional) Provide any tags you'd like these resources to be tagged with. 
+    16. Under *Enable S3 Guard*, enter **prefix-dynamodb-table**
        ![dynamo](https://github.com/tonyHuinker/cdp-aws-quickstart/blob/master/screenshots/dynamo.png?raw=true).
-    18. Click **Register Environment**
+    17. Click **Next**
+    18. Under *Logs - Storage and Audit*, choose the Instance Profile we mentioned to save earlier, titled **prefix-log-access-instance-profile**, for logs location base choose **S3BucketName/logs**, and for *Ranger Audit Role* choose **prefix-ranger-audit-role**
+        ![logs](https://github.com/tonyHuinker/cdp-aws-quickstart/blob/master/screenshots/logs.png?raw=true).
+    19.  Under *Data Access*, choose the **prefix-data-access-instance-profile**, for *Storage Location Base* choose **S3Bucketname**. 
+        ![data](https://github.com/tonyHuinker/cdp-aws-quickstart/blob/master/screenshots/data.png?raw=true).
+    20. Click **Register Environment**
